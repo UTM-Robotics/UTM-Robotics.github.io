@@ -4,12 +4,13 @@ if (process.env.ENVIRONMENT !== "production") {
   dotenv.config();
 }
 
-const { spaceId, accessToken } = process.env;
-
+//const { spaceId, accessToken } = process.env;
+spaceId = "hyhmgfckc4j9";
+accessToken = "ojTuQGE-jHUaJqL19Dcv-t-YuLqVV7e0TMUPPSqagyw";
 module.exports = {
   siteMetadata: {
-    title: `Rohit Gupta`,
-    description: `Personal Site`,
+    title: `UTM Robotics`,
+    description: `Organizational site of the t`,
     author: `@rohitguptab`
   },
   plugins: [
