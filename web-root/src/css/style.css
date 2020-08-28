@@ -3,14 +3,14 @@
 img{max-width:100%}
 .site-header{background:#333333b8;position:fixed;top:0;left:0;right:0;z-index:999;padding:20px 0}
 .site-header *{color:#fff}
-a{color:#ef5826}
+a{color:#023373}
 h2{font-size:28px;line-height:34px;color:#363636}
 h3{font-size:22px}
 h4{font-size:18px}
 h5{font-size:10px}
 p{font-size:14px}
 .banner{position:relative;height:100vh}
-a:hover{color:#d83d0a;text-decoration:underline}
+a:hover{color:#012B5D;text-decoration:underline}
 .banner .banner-details{position:absolute;top:50%;left:50%;z-index:9;display:flex;justify-content:center;align-items:center;flex-direction:column;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);width:90%;color:#fff}
 .banner img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 body{margin:0;background:#fafafe}
@@ -24,7 +24,7 @@ body{margin:0;background:#fafafe}
 .banner .banner-details .social{display:flex;margin:0;padding:0;list-style:none}
 .banner .banner-details .social li{margin:0 10px}
 .banner .banner-details .social li a{text-decoration:none;width:40px;height:40px;display:flex;justify-content:center;align-items:center;border:2px solid #fff;color:#fff;position:relative;overflow:hidden}
-.banner .banner-details .social li a:after{content:"";background:#ef5826;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%}
+.banner .banner-details .social li a:after{content:"";background:#023373;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%}
 .banner .banner-details .social li a:before{position:relative;z-index:1}
 .banner .banner-details .social li a:hover:after{top:0}
 .site-header .header-main{display:flex;justify-content:center;align-items:center}
@@ -59,7 +59,7 @@ body{margin:0;background:#fafafe}
 .slick-slider{position:relative}
 .slick-dots li button{font-size:0;line-height:0;display:block;padding:5px;color:transparent;border:0;outline:none;background:black;width:100%;height:100%;cursor:pointer;border-radius:50%}
 .slick-dots li{display:inline-block;position:relative;display:inline-block;margin:0 5px;padding:0;width:10px;height:10px;cursor:pointer}
-.slick-dots li.slick-active button{background:red}
+.slick-dots li.slick-active button{background:#BBD8F2}
 .testi-inner{display:block!important;width:700px!important;margin:0 auto;padding-bottom:60px;max-width:100%}
 .testi-inner .avatar{display:block;margin:0 auto;margin-bottom:15px;width:100px;height:100px;object-fit:cover;border-radius:100%}
 .testi-inner p{}
@@ -96,7 +96,7 @@ form>div{margin-bottom:15px}
 h2,
 .line-heading{display:inline-block;position:relative}
 h2:after,
-.line-heading:after{content:"";width:25px;height:1px;display:inline-block;position:absolute;background:#ef5826;top:100%;left:0}
+.line-heading:after{content:"";width:30px;height:2px;display:inline-block;position:absolute;background:#022859;top:100%;left:0}
 .see-more{text-align:center;display:inline-block;width:100%;margin-top:20px}
 .see-more a{text-decoration:none;width:auto;height:auto;border:1px solid #333;color:#333;position:relative;overflow:hidden;padding:8px 20px;display:inline-block;font-weight:600}
 .see-more a:after{content:"";background:#333;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%;z-index:0}

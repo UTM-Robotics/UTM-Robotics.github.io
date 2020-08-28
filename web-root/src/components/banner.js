@@ -47,7 +47,16 @@ export default class Banner extends Component {
                   rel="noopener noreferrer"
                 ></a>
               </li>
-              <li>
+              {/* TO CREATE A DISCORD BUTTON */}
+              {/* <li>
+                <a
+                  className="fab fa-discord"
+                  href={data.discord}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ></a>
+              </li> */}
+              {/* <li>
                 <a
                   className="fab fa-linkedin-in"
                   href={data.linkdin}
@@ -62,7 +71,7 @@ export default class Banner extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

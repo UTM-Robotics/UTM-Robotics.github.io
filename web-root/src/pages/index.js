@@ -90,11 +90,11 @@ export const pageQuery = graphql`
       designation
       age
       facebook
-      github
+      #github
       gmail
       id
       instagram
-      linkdin
+      #linkdin
       twitter
       location
       description {
@@ -113,7 +113,7 @@ export const pageQuery = graphql`
           sizes
         }
       }
-      bannerList
+      #bannerList
     }
     allContentfulService {
       edges {

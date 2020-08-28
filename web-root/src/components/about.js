@@ -69,7 +69,16 @@ const Header = ({ data }) => (
                     rel="noopener noreferrer"
                   ></a>
                 </li>
-                <li>
+                {/* TO CREATE A DISCORD BUTTON */}
+                {/* <li>
+                  <a
+                    className="fab fa-discord"
+                    href={data.discord}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                </li> */}
+                {/* <li>
                   <a
                     className="fab fa-linkedin-in"
                     href={data.linkdin}
@@ -84,7 +93,7 @@ const Header = ({ data }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                   ></a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
