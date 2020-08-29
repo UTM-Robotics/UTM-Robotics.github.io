@@ -47,11 +47,11 @@ body{margin:0;background:#fafafe}
 .about-details .socials ul li{margin-right:10px}
 .about-details .socials ul li a{text-decoration:none;width:40px;height:40px;display:flex;justify-content:center;align-items:center;border:2px solid #333;color:#333;position:relative;overflow:hidden}
 .about-details .socials ul li a:before{position:relative;z-index:1}
-.about-details .socials ul li a:after{content:"";background:#333;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%}
+.about-details .socials ul li a:after{content:"";background:#023373;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%}
 .about-details .socials ul li a:hover:after{top:0}
 .about-details .socials ul li a:hover{color:#fff}
 .service-main{text-align:center;box-shadow:3px 3px 8px 2px #0000000a;padding:30px 30px;transition:0.5s all;background:#fff}
-.section:nth-child(even) .service-main{background:#fafafe}
+.section:nth-child(even) .sz-main{background:#fafafe}
 .service-main:hover{box-shadow:3px 3px 8px 2px #0000002b;transition:0.5s all}
 .slick-slider .slick-list div{display:flex;width:100%;text-align:center}
 .slick-slider .slick-arrow{display:none!important}

@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 
 import Banner from "../components/banner";
 import About from "../components/about";
-import Service from "../components/service";
+import Team from "../components/team";
 import Work from "../components/work";
 import Blogs from "../components/blogs";
 import Testimonial from "../components/testimonial";
@@ -28,9 +28,9 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Service")
+      .filter(item => item === "Team")
       .map(t => {
-        return <Service data={data.allContentfulService}></Service>;
+        return <Team data={data.allContentfulService}></Team>;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -88,7 +88,7 @@ export const pageQuery = graphql`
         }
       }
       designation
-      age
+      #age
       facebook
       #github
       gmail

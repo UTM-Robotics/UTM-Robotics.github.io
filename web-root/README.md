@@ -20,7 +20,7 @@ https://rg-portfolio.netlify.com/
 - Blogs listing with each blog post.
 - Contact form with Email notification using formspree.io.
 - Photos and Blogs page listing.
-- Different types of sections like About, Service, Blogs, Work, Testimonials, Photos, and contact.
+- Different types of sections like About, Team, Blogs, Work, Testimonials, Photos, and contact.
 - All settings manage from contentful for example Header Menu, Homepage sections, blogs, and photos, etc.
 - Social share in blog details pages with comment ( Disqus ).
 - PWA

@@ -57,11 +57,11 @@ export default class Header extends Component {
                       );
                     })}
                   {data.menus
-                    .filter(item => item === "Service")
+                    .filter(item => item === "Team")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`/#Service`}>Service</Link>
+                          <Link to={`/#Team`}>Team</Link>
                         </li>
                       );
                     })}

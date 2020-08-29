@@ -71,14 +71,14 @@ const Header = ({ data }) => (
                   ></a>
                 </li>
                 {/* TO CREATE A DISCORD BUTTON */}
-                {/* <li>
+                <li>
                   <a
                     className="fab fa-discord"
                     href={data.discord}
                     target="_blank"
                     rel="noopener noreferrer"
                   ></a>
-                </li> */}
+                </li>
                 {/* <li>
                   <a
                     className="fab fa-linkedin-in"
