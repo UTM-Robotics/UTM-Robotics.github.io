@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700,700i&display=swap');
 *{font-family:'Josefin Sans',sans-serif}
 img{max-width:100%}
-.site-header{background:#333333b8;position:fixed;top:0;left:0;right:0;z-index:999;padding:20px 0}
+/* TEMPLATES GREY COLOUR */
+/* .site-header{background:#333333b8;position:fixed;top:0;left:0;right:0;z-index:999;padding:20px 0} */
+/* UofT Colour */
+.site-header{background:#052549;position:fixed;top:0;left:0;right:0;z-index:999;padding:20px 0}
 .site-header *{color:#fff}
 a{color:#023373}
 h2{font-size:28px;line-height:34px;color:#363636}
@@ -17,7 +20,7 @@ p{font-size:14px}
   align-items: center;
 }
 .animation h3 {
-  font-size: 3rem;
+  font-size:30px;
   padding: 0.5rem;
   text-align: center;
   overflow: hidden;
@@ -26,15 +29,15 @@ p{font-size:14px}
   font-weight: normal;
   color: #ccc;
 }
-.animation h3  span.cursor {
+.animation h3 span.cursor {
   display: inline-block;
   background-color: #ccc;
   width: 3px;
   animation: blink 1s infinite;
 }
-animation h3  p span.cursor.typing {
+/* .animation h5  p span.cursor.typing {
   animation: none;
-}
+} */
 @keyframes blink {
     0%  { background-color: #ccc; }
     49% { background-color: #ccc; }
