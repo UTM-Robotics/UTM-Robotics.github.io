@@ -16,8 +16,9 @@ import Photos from "../components/photos";
 const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
-      title={data.contentfulAboutMe.designation}
-      keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`]}
+      title={data.contentfulAboutMe.name}
+      // title={data.contentfulAboutMe.designation}
+      // keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`]}
     />
     <Banner data={data.contentfulAboutMe}></Banner>
 
