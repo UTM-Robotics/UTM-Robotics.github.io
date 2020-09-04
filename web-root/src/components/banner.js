@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Img from "gatsby-image";
+import Img from "gatsby-image"
 
 export default class Banner extends Component {
+  
   render() {
     const { data } = this.props;
     return (
@@ -13,8 +14,12 @@ export default class Banner extends Component {
         />
         <div className="container">
           <div className="banner-details">
-            <span>UTM Robotics</span>
-            <h1>We are {data.designation}.</h1>
+            <div class="animation">
+              <script src= "animation.js"></script>
+              <h3>We are <span class="animation_text"></span><span class="cursor">&nbsp;</span></h3>
+            </div>
+            {/* <span>We are {data.designation}.</span> */}
+            <h1>UTM Robotics</h1>
             {/* <ul className="sub-data">
               {data.bannerList.map((item, index) => {
                 return <li key={index}>{item}</li>;
@@ -79,3 +84,4 @@ export default class Banner extends Component {
     );
   }
 }
+
