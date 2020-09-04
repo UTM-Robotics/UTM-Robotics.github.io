@@ -65,7 +65,7 @@ export default class Header extends Component {
                         </li>
                       );
                     })}
-                  {/* {data.menus
+                  {data.menus
                     .filter(item => item === "Blogs")
                     .map(t => {
                       return (
@@ -73,7 +73,7 @@ export default class Header extends Component {
                           <Link to={`/#Blogs`}>Blogs</Link>
                         </li>
                       );
-                    })} */}
+                    })}
 
                   {/* {data.menus
                     .filter(item => item === "Work")
