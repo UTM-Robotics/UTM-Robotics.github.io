@@ -7,8 +7,8 @@ import SEO from "../components/seo";
 import Banner from "../components/banner";
 import About from "../components/about";
 import Team from "../components/team";
-import Work from "../components/work";
-import Blogs from "../components/blogs";
+import News from "../components/news";
+
 import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
 import Photos from "../components/photos";
@@ -17,8 +17,8 @@ const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
       title={data.contentfulAboutMe.designation}
-      keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`]}
-    />
+      keywords={[`UofT`, `Toronto`, `Electrical`, `Mechanical`, `Computer Science`, `UTM`, `Robotics`, `News`]}
+      />
     <Banner data={data.contentfulAboutMe}></Banner>
 
     {data.contentfulSiteInformation.menus
@@ -34,16 +34,16 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Blogs")
+      .filter(item => item === "News")
       .map(t => {
-        return <Blogs data={data.allContentfulBlogs}></Blogs>;
+        return <News data={data.allContentfulNews}></News>;
       })}
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Work")
+    {/* {data.contentfulSiteInformation.menus
+      .filter(item => item === "Events")
       .map(t => {
-        return <Work data={data.allContentfulWorks}></Work>;
-      })}
+        return <Events data={data.allContentfulWorks}></Events>;
+      })} */}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Testimonials")
@@ -145,6 +145,27 @@ export const pageQuery = graphql`
             }
           }
           createdAt
+        }
+      }
+    }
+    allContentfulNews(limit: 100) {
+      edges {
+        node {
+          id
+          title
+          slug
+          featureImage {
+            fluid(maxWidth: 1500) {
+              base64
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+            }
+          }
+          date
         }
       }
     }

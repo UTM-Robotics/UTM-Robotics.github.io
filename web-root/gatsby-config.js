@@ -26,7 +26,8 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId,
-        accessToken
+        accessToken,
+        downloadLocal: false,
       }
     },
     `gatsby-transformer-sharp`,
@@ -35,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rohit Gupta`,
-        short_name: `Rohit Gupta`,
+        name: `University of Toronto Mississauga Robotics Club`,
+        short_name: `UTM Robotics Club`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#333`,

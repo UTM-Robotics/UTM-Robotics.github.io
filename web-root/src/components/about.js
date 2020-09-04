@@ -1,5 +1,4 @@
 import React from "react";
-import Img from "gatsby-image";
 
 const Header = ({ data }) => (
   <div className="about section" id="About">
