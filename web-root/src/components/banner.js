@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Img from "gatsby-image"
+import Typical from 'react-typical'
 
-export default class Banner extends Component {
+export default class Banner extends Component{
   
   render() {
     const { data } = this.props;
@@ -15,8 +16,26 @@ export default class Banner extends Component {
         <div className="container">
           <div className="banner-details">
             <div class="animation">
-              <script src= "animation.js"></script>
-              <h3>We are <span class="animation_text"></span><span class="cursor">&nbsp;</span></h3>
+              <h3>We are{' '}
+                <Typical className= "actual"
+                loop={Infinity} 
+                wrapper= "span"
+                steps={[
+                  'a Community',
+                  1000,
+                  'a Team', 
+                  1000,
+                  'Learning',
+                  1000,
+                  'Designing',
+                  1000,
+                  'Creating',
+                  1000,
+                  'Innovating',
+                  1000
+                ]}
+                />
+                </h3>
             </div>
             {/* <span>We are {data.designation}.</span> */}
             <h1>UTM Robotics</h1>

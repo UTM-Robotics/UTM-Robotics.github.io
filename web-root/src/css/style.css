@@ -25,19 +25,10 @@ p{font-size:14px}
   text-align: center;
   overflow: hidden;
 }
-.animation h3 span.typed-text {
-  font-weight: normal;
-  color: #ccc;
+.actual {
+  font-size:30px;
+  color:#1BAFBF
 }
-.animation h3 span.cursor {
-  display: inline-block;
-  background-color: #ccc;
-  width: 3px;
-  animation: blink 1s infinite;
-}
-/* .animation h5  p span.cursor.typing {
-  animation: none;
-} */
 @keyframes blink {
     0%  { background-color: #ccc; }
     49% { background-color: #ccc; }
