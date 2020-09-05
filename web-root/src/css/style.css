@@ -38,7 +38,7 @@ p{font-size:14px}
   }
 /* THE CSS FOR THE TYPING ANIMATION */
 /* SHAPING THE PROFILE IMAGES */
-.team-main .profile{display:block;margin:0 auto;  border: 2px solid #023373; margin-bottom:15px;width:100px;height:100px;object-fit:cover;border-radius:100%}
+.team-main .profile{display:block;margin:0 auto;  border: 2px solid #333; margin-bottom:15px;width:100px;height:100px;object-fit:cover;border-radius:100%}
 /* SHAPING THE PROFILE IMAGES */
 .banner{position:relative;height:100vh}
 a:hover{color:#012B5D;text-decoration:underline}
