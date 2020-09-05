@@ -35,7 +35,6 @@ export default class Header extends Component {
             >
               <span></span>
             </div>
-            {header === "home" ? (
               <div className="menu">
                 <ul
                   onClick={() => {
@@ -85,20 +84,11 @@ export default class Header extends Component {
                       );
                     })}
                   {data.menus
-                    .filter(item => item === "Testimonials")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Testimonials`}>Testimonials</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
                     .filter(item => item === "Photos")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`/#Photos`}>Photos</Link>
+                          <Link to="/photos">Photos</Link>
                         </li>
                       );
                     })}
@@ -113,39 +103,6 @@ export default class Header extends Component {
                     })}
                 </ul>
               </div>
-            ) : (
-              <div className="menu">
-                <ul
-                  onClick={() => {
-                    this.setState({
-                      menu: false
-                    });
-                  }}
-                >
-                  <li>
-                    <Link to="/#home">Home</Link>
-                  </li>
-                  {data.menus
-                    .filter(item => item === "News")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to="/News">News</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to="/photos">Photos</Link>
-                        </li>
-                      );
-                    })}
-                </ul>
-              </div>
-            )}
           </div>
         </div>
       </header>

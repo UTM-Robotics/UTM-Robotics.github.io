@@ -22,8 +22,8 @@ export default class News extends Component {
               <h1 className="line-heading h2">News</h1>
             </div>
             <ul
-              className={`news-list ${
-                data.allContentfulNews.edges.length < 5 ? "few-news" : ""
+              className={`blogs-list ${
+                data.allContentfulNews.edges.length < 5 ? "few-blogs" : ""
               }`}
             >
               {data.allContentfulNews.edges.map((item, index) => {
@@ -44,7 +44,7 @@ export default class News extends Component {
                         <h3 className="title">{item.node.title}</h3>
                         <span className="date">
                           <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.createdAt).format("LL")}
+                          {moment(item.node.date).format("LL")}
                         </span>
                       </div>
                     </div>
@@ -60,8 +60,8 @@ export default class News extends Component {
 }
 
 export const pageQuery = graphql`
-  query NewsQuery {
-    allContentfulNews(sort: {fields: createdAt, order: DESC}) {
+  query allNewsQuery {
+    allContentfulNews(sort: {fields: date, order: DESC}) {
       edges {
         node {
           title
@@ -77,7 +77,7 @@ export const pageQuery = graphql`
             }
           }
           tags
-          createdAt
+          date
         }
       }
     }

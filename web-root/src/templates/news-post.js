@@ -19,7 +19,7 @@ export default class newsPost extends Component {
             `${data.title}`
           ]}
         />
-        <div className="site-container news-post">
+        <div className="site-container blogs-post">
           <div className="container">
             {data.featureImage ? (
               <Img
@@ -57,6 +57,11 @@ export const pageQuery = graphql`
       id
       title
       slug
+      article {
+        childMarkdownRemark {
+          html
+        }
+      }
       featureImage {
         fluid(maxWidth: 1500) {
           base64

@@ -13,7 +13,7 @@ export default class News extends Component {
             <h2>News</h2>
           </div>
           <ul
-            className={`news-list ${data.edges.length < 5 ? "few-news" : ""}`}
+            className={`blogs-list ${data.edges.length < 5 ? "few-news" : ""}`}
           >
             {data.edges.map((item, index) => {
               return (
@@ -43,7 +43,7 @@ export default class News extends Component {
             })}
           </ul>
           <div className="see-more">
-            <Link to="/News">
+            <Link to="/news">
               <span>More News</span>
             </Link>
           </div>
