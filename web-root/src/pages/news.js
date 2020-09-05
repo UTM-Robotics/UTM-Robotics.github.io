@@ -65,6 +65,7 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          slug
           featureImage {
             fluid(maxWidth: 1500) {
               base64
