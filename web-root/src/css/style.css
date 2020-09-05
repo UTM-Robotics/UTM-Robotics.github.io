@@ -38,14 +38,14 @@ p{font-size:14px}
   }
 /* THE CSS FOR THE TYPING ANIMATION */
 /* SHAPING THE PROFILE IMAGES */
-.team-main .profile{display:block;margin:0 auto;  border: 2px solid #333; margin-bottom:15px;width:100px;height:100px;object-fit:cover;border-radius:100%}
+.team-main .profile{display:block;margin:0 auto;  border: 2px solid #023373; margin-bottom:15px;width:100px;height:100px;object-fit:cover;border-radius:100%}
 /* SHAPING THE PROFILE IMAGES */
 .banner{position:relative;height:100vh}
 a:hover{color:#012B5D;text-decoration:underline}
 .banner .banner-details{position:absolute;top:50%;left:50%;z-index:9;display:flex;justify-content:center;align-items:center;flex-direction:column;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);width:90%;color:#fff}
 .banner img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 body{margin:0;background:#fafafe}
-.banner .banner-details span{font-size:25px;margin-bottom:20px;text-shadow:1px 1px 4px rgb(139, 70, 70)}
+.banner .banner-details span{font-size:25px;margin-bottom:20px;text-shadow:1px 1px 4px #333}
 .banner .banner-details h1{font-size:60px;margin-top:0;margin-bottom:20px;text-align:center;text-shadow:1px 1px 4px #333}
 .banner:after{content:"";background:rgba(0,0,0,0.55);position:absolute;left:0;right:0;top:0;bottom:0}
 .banner .banner-details .sub-data{padding:0;display:flex;list-style:none;margin:0 0 30px 0}
