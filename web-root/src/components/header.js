@@ -5,7 +5,7 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menu: false
+      menu: false,
     };
   }
 
@@ -29,123 +29,79 @@ export default class Header extends Component {
               className="responsive-menu"
               onClick={() => {
                 this.setState({
-                  menu: !menu
+                  menu: !menu,
                 });
               }}
             >
               <span></span>
             </div>
-            {header === "home" ? (
-              <div className="menu">
-                <ul
-                  onClick={() => {
-                    this.setState({
-                      menu: false
-                    });
-                  }}
-                >
-                  <li>
-                    <Link to="/#home">Home</Link>
-                  </li>
-                  {data.menus
-                    .filter(item => item === "About")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#About`}>About</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Team")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Team`}>Team</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
-                    .filter(item => item === "Blogs")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Blogs`}>Blogs</Link>
-                        </li>
-                      );
-                    })}
-
-                  {/* {data.menus
-                    .filter(item => item === "Work")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Work`}>Work</Link>
-                        </li>
-                      );
-                    })} */}
-                  {/* {data.menus
-                    .filter(item => item === "Testimonials")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Testimonials`}>Testimonials</Link>
-                        </li>
-                      );
-                    })} */}
-                  {/* {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Photos`}>Photos</Link>
-                        </li>
-                      );
-                    })} */}
-                  {data.menus
-                    .filter(item => item === "Contact")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to={`/#Contact`}>Contact</Link>
-                        </li>
-                      );
-                    })}
-                </ul>
-              </div>
-            ) : (
-              <div className="menu">
-                <ul
-                  onClick={() => {
-                    this.setState({
-                      menu: false
-                    });
-                  }}
-                >
-                  <li>
-                    <Link to="/#home">Home</Link>
-                  </li>
-                  {data.menus
-                    .filter(item => item === "Blogs")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to="/blogs">Blogs</Link>
-                        </li>
-                      );
-                    })}
-                  {/* {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
-                      return (
-                        <li>
-                          <Link to="/photos">Photos</Link>
-                        </li>
-                      );
-                    })} */}
-                </ul>
-              </div>
-            )}
+            <div className="menu">
+              <ul
+                onClick={() => {
+                  this.setState({
+                    menu: false,
+                  });
+                }}
+              >
+                <li>
+                  <Link to="/#home">Home</Link>
+                </li>
+                {data.menus
+                  .filter((item) => item === "About")
+                  .map((t) => {
+                    return (
+                      <li>
+                        <Link to={`/#About`}>About</Link>
+                      </li>
+                    );
+                  })}
+                {data.menus
+                  .filter((item) => item === "Team")
+                  .map((t) => {
+                    return (
+                      <li>
+                        <Link to={`/#Team`}>Team</Link>
+                      </li>
+                    );
+                  })}
+                {data.menus
+                  .filter((item) => item === "News")
+                  .map((t) => {
+                    return (
+                      <li>
+                        <Link to={`/#News`}>News</Link>
+                      </li>
+                    );
+                  })}
+                {data.menus
+                  .filter((item) => item === "Events")
+                  .map((t) => {
+                    return (
+                      <li>
+                        <Link to={`/#Events`}>Events</Link>
+                      </li>
+                    );
+                  })}
+                {data.menus
+                  .filter((item) => item === "Photos")
+                  .map((t) => {
+                    return (
+                      <li>
+                        <Link to="/photos">Photos</Link>
+                      </li>
+                    );
+                  })}
+                {data.menus
+                  .filter((item) => item === "Contact")
+                  .map((t) => {
+                    return (
+                      <li>
+                        <Link to={`/#Contact`}>Contact</Link>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
           </div>
         </div>
       </header>
