@@ -113,11 +113,23 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          profileImg{
+            fluid(maxWidth: 200) {
+              base64
+              aspectRatio
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+              sizes
+            }
+          }
           description {
             childMarkdownRemark {
               html
             }
           }
+          
         }
       }
     }
