@@ -19,7 +19,7 @@ export default class newsPost extends Component {
             `${data.title}`
           ]}
         />
-        <div className="site-container blogs-post">
+        <div className="site-container blog-post">
           <div className="container">
             {data.featureImage ? (
               <Img

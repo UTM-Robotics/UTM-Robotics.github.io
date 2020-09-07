@@ -7,26 +7,26 @@ import moment from "moment";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default class Blogs extends Component {
+export default class Events extends Component {
   render() {
     const { data } = this.props;
     return (
       <Layout>
         <SEO
-          title="Blogs"
-          keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Blogs`]}
+          title="News"
+          keywords={[`UofT`, `Toronto`, `Electrical`, `Mechanical`, `Computer Science`, `UTM`, `Robotics`, `News`]}
         />
-        <div className="site-container blogs-page" id="Blogs">
+        <div className="site-container news-page" id="News">
           <div className="container">
             <div className="section-head">
-              <h1 className="line-heading h2">Blogs</h1>
+              <h1 className="line-heading h2">News</h1>
             </div>
             <ul
               className={`blogs-list ${
-                data.allContentfulBlogs.edges.length < 5 ? "few-blogs" : ""
+                data.allContentfulNews.edges.length < 5 ? "few-blogs" : ""
               }`}
             >
-              {data.allContentfulBlogs.edges.map((item, index) => {
+              {data.allContentfulNews.edges.map((item, index) => {
                 return (
                   <li key={index} className="item">
                     <div className="inner">
@@ -44,7 +44,7 @@ export default class Blogs extends Component {
                         <h3 className="title">{item.node.title}</h3>
                         <span className="date">
                           <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.createdAt).format("LL")}
+                          {moment(item.node.date).format("LL")}
                         </span>
                       </div>
                     </div>
@@ -60,8 +60,8 @@ export default class Blogs extends Component {
 }
 
 export const pageQuery = graphql`
-  query BlogsQuery {
-    allContentfulBlogs(sort: {fields: createdAt, order: DESC}) {
+  query allEventsQuery {
+    allContentfulNews(sort: {fields: date, order: DESC}) {
       edges {
         node {
           title
@@ -77,7 +77,8 @@ export const pageQuery = graphql`
               sizes
             }
           }
-          createdAt
+          tags
+          date
         }
       }
     }

@@ -69,7 +69,7 @@ export default class Header extends Component {
                   .map((t) => {
                     return (
                       <li>
-                        <Link to={`/#News`}>News</Link>
+                        <Link to={`/news`}>News</Link>
                       </li>
                     );
                   })}
@@ -78,7 +78,7 @@ export default class Header extends Component {
                   .map((t) => {
                     return (
                       <li>
-                        <Link to={`/#Events`}>Events</Link>
+                        <Link to={`/events`}>Events</Link>
                       </li>
                     );
                   })}

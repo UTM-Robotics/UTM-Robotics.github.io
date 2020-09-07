@@ -7,7 +7,7 @@ export default class News extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div className="news-section section" id="News">
+      <div className="blogs-section section" id="News">
         <div className="container">
           <div className="section-head">
             <h2>News</h2>

@@ -8,8 +8,8 @@ import Banner from "../components/banner";
 import About from "../components/about";
 import Team from "../components/team";
 import News from "../components/news";
+import Events from "../components/events";
 
-import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
 // import Photos from "../components/photos";
 
@@ -47,11 +47,11 @@ const IndexPage = ({ data }) => (
       .map((t) => {
         return <News data={data.allContentfulNews}></News>;
       })}
-    {/* {data.contentfulSiteInformation.menus
+    {data.contentfulSiteInformation.menus
       .filter(item => item === "Events")
       .map(t => {
-        return <Events data={data.allContentfulWorks}></Events>;
-      })} */}
+        return <Events data={data.allContentfulEvents}></Events>;
+      })}
     {data.contentfulSiteInformation.menus
       .filter((item) => item === "Contact")
       .map((t) => {
@@ -133,26 +133,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulBlogs(limit: 5, sort: { fields: createdAt, order: DESC }) {
-      edges {
-        node {
-          title
-          slug
-          featureImage {
-            fluid(maxWidth: 600) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
-          }
-          createdAt
-        }
-      }
-    }
     allContentfulNews(limit: 100) {
       edges {
         node {
@@ -174,46 +154,25 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulTestimonials {
+    allContentfulEvents {
       edges {
         node {
-          name
-          subTitle
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-          avatarImage {
-            fluid(maxWidth: 200) {
+          id
+          featuredImages {
+            fluid {
               base64
               aspectRatio
               src
               srcSet
-              srcWebp
               srcSetWebp
               sizes
             }
           }
-        }
-      }
-    }
-    allContentfulWorks {
-      edges {
-        node {
-          siteName
-          url
-          image {
-            fluid(maxWidth: 600) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
-          }
+          startTime
+          slug
+          isFeatured
+          title
+          tags
         }
       }
     }
