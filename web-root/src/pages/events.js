@@ -14,26 +14,35 @@ export default class Events extends Component {
       <Layout>
         <SEO
           title="News"
-          keywords={[`UofT`, `Toronto`, `Electrical`, `Mechanical`, `Computer Science`, `UTM`, `Robotics`, `News`]}
+          keywords={[
+            `UofT`,
+            `Toronto`,
+            `Electrical`,
+            `Mechanical`,
+            `Computer Science`,
+            `UTM`,
+            `Robotics`,
+            `News`,
+          ]}
         />
-        <div className="site-container news-page" id="News">
+        <div className="site-container blog-page" id="News">
           <div className="container">
             <div className="section-head">
               <h1 className="line-heading h2">News</h1>
             </div>
             <ul
               className={`blogs-list ${
-                data.allContentfulNews.edges.length < 5 ? "few-blogs" : ""
+                data.allContentfulEvents.edges.length < 5 ? "few-blogs" : ""
               }`}
             >
-              {data.allContentfulNews.edges.map((item, index) => {
+              {data.allContentfulEvents.edges.map((item, index) => {
                 return (
                   <li key={index} className="item">
                     <div className="inner">
-                      <Link className="link" to={item.node.slug} />
-                      {item.node.featureImage ? (
+                      <Link className="link" to={"events/" + item.node.slug} />
+                      {item.node.featureImages ? (
                         <Img
-                          fixed={item.node.featureImage.fluid}
+                          fixed={item.node.featureImages[0].fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
                         />
@@ -44,7 +53,11 @@ export default class Events extends Component {
                         <h3 className="title">{item.node.title}</h3>
                         <span className="date">
                           <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.date).format("LL")}
+                          {moment(item.node.startTime).format("LL")}
+                        </span>
+                        <span className="date">
+                          <i className="fas fa-calendar-alt"></i>{" "}
+                          {moment(item.node.endTime).format("LL")}
                         </span>
                       </div>
                     </div>
@@ -61,24 +74,26 @@ export default class Events extends Component {
 
 export const pageQuery = graphql`
   query allEventsQuery {
-    allContentfulNews(sort: {fields: date, order: DESC}) {
+    allContentfulEvents {
       edges {
         node {
-          title
-          slug
-          featureImage {
-            fluid(maxWidth: 1500) {
+          id
+          featuredImages {
+            fluid {
               base64
               aspectRatio
               src
               srcSet
-              srcWebp
               srcSetWebp
               sizes
             }
           }
+          startTime
+          endTime
+          slug
+          isFeatured
+          title
           tags
-          date
         }
       }
     }

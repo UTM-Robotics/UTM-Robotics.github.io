@@ -22,8 +22,43 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
         result.data.allContentfulNews.edges.forEach(edge => {
           createPage({
-            path: edge.node.slug,
+            path: "news/" + edge.node.slug,
             component: newsPostTemplate,
+            context: {
+              slug: edge.node.slug
+            }
+          });
+        });
+        return;
+      })
+    );
+  });
+};
+
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+  return new Promise((resolve, reject) => {
+    const eventsPostTemplate = path.resolve("src/templates/event-post.js");
+    resolve(
+      graphql(`
+        {
+          allContentfulEvents(limit: 100) {
+            edges {
+              node {
+                id
+                slug
+              }
+            }
+          }
+        }
+      `).then(result => {
+        if (result.errors) {
+          reject(result.errors);
+        }
+        result.data.allContentfulEvents.edges.forEach(edge => {
+          createPage({
+            path: "events/" + edge.node.slug,
+            component: eventsPostTemplate,
             context: {
               slug: edge.node.slug
             }

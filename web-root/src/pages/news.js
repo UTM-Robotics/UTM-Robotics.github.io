@@ -17,7 +17,7 @@ export default class News extends Component {
           keywords={[`UofT`, `Toronto`, `Electrical`, `Mechanical`, `Computer Science`, `UTM`, `Robotics`, `News`]}
         />
         <div className="site-container news-page" id="News">
-          <div className="container">
+          <div className="container"> 
             <div className="section-head">
               <h1 className="line-heading h2">News</h1>
             </div>
@@ -30,7 +30,7 @@ export default class News extends Component {
                 return (
                   <li key={index} className="item">
                     <div className="inner">
-                      <Link className="link" to={item.node.slug} />
+                      <Link className="link" to={"news/" + item.node.slug} />
                       {item.node.featureImage ? (
                         <Img
                           fixed={item.node.featureImage.fluid}

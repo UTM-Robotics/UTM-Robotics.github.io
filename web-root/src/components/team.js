@@ -15,15 +15,16 @@ export default class team extends Component {
               return (
                 <div key={index} className="col-md-4 mb-3">
                   <div className="team-main">
-                  <Img className="profile"
-                        fixed={item.node.profileImg.fluid}
-                        objectFit="cover"
-                        objectPosition="50% 50%"
-                      />
-                    <h3>{item.node.title}</h3> 
+                    <Img
+                      className="profile"
+                      fixed={item.node.profileImg.fluid}
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                    />
+                    <h3>{item.node.title}</h3>
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: item.node.description.childMarkdownRemark.html
+                        __html: item.node.description.childMarkdownRemark.html,
                       }}
                     />
                   </div>

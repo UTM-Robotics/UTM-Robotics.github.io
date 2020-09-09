@@ -1,25 +1,33 @@
 import React, { Component } from "react";
-import { nominalTypeHack } from "prop-types";
-import { RedditIcon } from "react-share";
-
 export default class Tag extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      tag: false,
-    };
+    this.tag = props.tag;
   }
   render() {
-    tag = this.state.tag
-    color = { color: "red" };
-    if tag === "":
-        pass
-    elif tag === "":
-
-    return tag ? (
+    const tag = this.tag;
+    var color = { color: "red" };
+    switch (tag) {
+      case "Collab":
+        color = { color: "blue" };
+        break;
+      case "Workshop":
+        color = { color: "yellow" };
+        break;
+      case "Fun":
+        color = { color: "orange" };
+        break;
+      case "Academic":
+        color = { color: "green" };
+        break;
+      default:
+        color = { color: "grey" };
+        break;
+    }
+    return (
       <div class="tag" style={color}>
-        <label for="">tag.</label>
+        <label>{tag}</label>
       </div>
-    ): {};
+    );
   }
 }

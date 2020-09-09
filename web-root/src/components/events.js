@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
+import Tag from "./tags";
 import moment from "moment";
 
 export default class Events extends Component {
@@ -13,16 +14,16 @@ export default class Events extends Component {
             <h2>Events</h2>
           </div>
           <ul
-            className={`blogs-list ${data.edges.length < 5 ? "few-news" : ""}`}
+            className={`blogs-list ${data.edges.length < 5 ? "few-blogs" : ""}`}
           >
             {data.edges.map((item, index) => {
               return (
                 <li key={index} className="item">
                   <div className="inner">
-                    <Link className="link" to={item.node.slug} />
-                    {item.node.featureImage ? (
+                    <Link className="link" to={"events/" + item.node.slug} />
+                    {item.node.featureImages ? (
                       <Img
-                        fixed={item.node.featureImage.fluid}
+                        fixed={item.node.featureImages[0].fluid}
                         objectFit="cover"
                         objectPosition="50% 50%"
                       />
@@ -30,6 +31,9 @@ export default class Events extends Component {
                       <div className="no-image"></div>
                     )}
                     <div className="details">
+                      {item.node.tags.forEach((element) => {
+                        return (<Tag tag={element}></Tag>);
+                      })}
                       <h3 className="title">{item.node.title}</h3>
                       <span className="date">
                         <i className="fas fa-calendar-alt"></i>{" "}

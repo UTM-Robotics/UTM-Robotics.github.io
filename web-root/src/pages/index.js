@@ -61,7 +61,7 @@ const IndexPage = ({ data }) => (
 );
 
 export default IndexPage;
-
+//Note: Service means "Team" here, technical debt
 export const pageQuery = graphql`
   query AboutQuery {
     contentfulAboutMe {

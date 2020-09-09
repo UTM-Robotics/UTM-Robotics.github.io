@@ -1,0 +1,79 @@
+import React, { Component } from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import moment from "moment";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+
+export default class eventsPost extends Component {
+  render() {
+    const data = this.props.data.contentfulEvents;
+    return (
+      <Layout highlighted="events">
+        <SEO
+          title={data.title}
+          keywords={[
+            `Rohit Gupta`,
+            `Frontend Developer`,
+            `Developer`,
+            `${data.title}`
+          ]}
+        />
+        <div className="site-container blog-post">
+          <div className="container">
+            {data.featureImages ? (
+              <Img
+                className="feature-img"
+                fixed={data.featureImages[0].fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+              />
+            ) : (
+              <div className="no-image"></div>
+            )}
+
+            <div className="details">
+              <h1 className="title">{data.title}</h1>
+              <span className="date">
+                <i class="fas fa-calendar-alt"></i>{" "}
+                {moment(data.startTime).format("LL")}
+              </span>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: data.description.childMarkdownRemark.html
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+}
+
+export const pageQuery = graphql`
+  query EventsPostQuery($slug: String!) {
+    contentfulEvents(slug: { eq: $slug }) {
+      featuredImages {
+        fluid {
+          base64
+          aspectRatio
+          src
+          srcSetWebp
+          srcSet
+          sizes
+        }
+      }
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
+      startTime
+      endTime
+      title
+      isFeatured
+      tags
+    }
+  }
+`;

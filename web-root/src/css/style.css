@@ -91,13 +91,6 @@ body{margin:0;background:#fafafe}
 .slick-dots li button{font-size:0;line-height:0;display:block;padding:5px;color:transparent;border:0;outline:none;background:black;width:100%;height:100%;cursor:pointer;border-radius:50%}
 .slick-dots li{display:inline-block;position:relative;display:inline-block;margin:0 5px;padding:0;width:10px;height:10px;cursor:pointer}
 .slick-dots li.slick-active button{background:#BBD8F2}
-.testi-inner{display:block!important;width:700px!important;margin:0 auto;padding-bottom:60px;max-width:100%}
-.testi-inner .avatar{display:block;margin:0 auto;margin-bottom:15px;width:100px;height:100px;object-fit:cover;border-radius:100%}
-.testi-inner p{}
-.testi-inner .name{margin:0}
-.testimonials{overflow:hidden}
-.testi-inner .sub-name{font-size:14px}
-.testimonials{text-align:center}
 form label{width:100%}
 form input,
 form textarea{display:block;width:100%;padding:10px 15px;box-sizing:border-box;outline:none;resize:none;background:#fafafe!important;z-index:2;position:relative;line-height:18px;font-size:16px;-webkit-transition:none 0s ease 0s;transition:none 0s ease 0s;border:1px solid hsla(0,0%,80%,.37);margin:10px 0 0}
@@ -136,7 +129,6 @@ h2:after,
 .see-more a span{position:relative;z-index:1}
 .work-list{display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0 -5px}
 .work-list .item{width:33.33%;padding:0 5px;margin-bottom:10px}
-.testimonials .slick-list *{outline:none!important}
 .site-footer{padding:20px;background:#333;margin-bottom:10px;text-align:center;color:#fff}
 .slick-list{overflow:hidden}
 .blogs-list .item .inner .gatsby-image-wrapper{width:100%;height:250px}
