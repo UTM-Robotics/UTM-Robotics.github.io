@@ -39,7 +39,7 @@ export default class Events extends Component {
                 return (
                   <li key={index} className="item">
                     <div className="inner">
-                      <Link className="link" to={"events/" + item.node.slug} />
+                      <Link className="link" to={item.node.slug} />
                       {item.node.featureImages ? (
                         <Img
                           fixed={item.node.featureImages[0].fluid}
@@ -84,6 +84,7 @@ export const pageQuery = graphql`
               aspectRatio
               src
               srcSet
+              srcWebp
               srcSetWebp
               sizes
             }
