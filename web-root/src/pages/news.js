@@ -14,10 +14,19 @@ export default class News extends Component {
       <Layout>
         <SEO
           title="News"
-          keywords={[`UofT`, `Toronto`, `Electrical`, `Mechanical`, `Computer Science`, `UTM`, `Robotics`, `News`]}
+          keywords={[
+            `UofT`,
+            `Toronto`,
+            `Electrical`,
+            `Mechanical`,
+            `Computer Science`,
+            `UTM`,
+            `Robotics`,
+            `News`,
+          ]}
         />
         <div className="site-container news-page" id="News">
-          <div className="container"> 
+          <div className="container">
             <div className="section-head">
               <h1 className="line-heading h2">News</h1>
             </div>
@@ -61,7 +70,7 @@ export default class News extends Component {
 
 export const pageQuery = graphql`
   query allNewsQuery {
-    allContentfulNews(sort: {fields: date, order: DESC}) {
+    allContentfulNews(sort: { fields: date, order: DESC }) {
       edges {
         node {
           title

@@ -4,10 +4,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
   return new Promise((resolve, reject) => {
     const newsPostTemplate = path.resolve("src/templates/news-post.js");
+    const eventsPostTemplate = path.resolve("src/templates/event-post.js");
     resolve(
       graphql(`
         {
           allContentfulNews(limit: 100) {
+            edges {
+              node {
+                id
+                slug
+              }
+            }
+          }
+          allContentfulEvents(limit: 100) {
             edges {
               node {
                 id
@@ -29,32 +38,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           });
         });
-        return;
-      })
-    );
-  });
-};
-
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-  return new Promise((resolve, reject) => {
-    const eventsPostTemplate = path.resolve("src/templates/event-post.js");
-    resolve(
-      graphql(`
-        {
-          allContentfulEvents(limit: 100) {
-            edges {
-              node {
-                id
-                slug
-              }
-            }
-          }
-        }
-      `).then(result => {
-        if (result.errors) {
-          reject(result.errors);
-        }
         result.data.allContentfulEvents.edges.forEach(edge => {
           createPage({
             path: "events/" + edge.node.slug,

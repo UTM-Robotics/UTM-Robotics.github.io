@@ -13,9 +13,14 @@ export default class newsPost extends Component {
         <SEO
           title={data.title}
           keywords={[
-            `Rohit Gupta`,
-            `Frontend Developer`,
-            `Developer`,
+            `UofT`,
+            `Toronto`,
+            `Electrical`,
+            `Mechanical`,
+            `Computer Science`,
+            `UTM`,
+            `Robotics`,
+            `News`,
             `${data.title}`
           ]}
         />
@@ -31,7 +36,6 @@ export default class newsPost extends Component {
             ) : (
               <div className="no-image"></div>
             )}
-
             <div className="details">
               <h1 className="title">{data.title}</h1>
               <span className="date">
@@ -40,7 +44,7 @@ export default class newsPost extends Component {
               </span>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: data.article.childMarkdownRemark.html
+                  __html: data.article.childMarkdownRemark.html,
                 }}
               />
             </div>

@@ -13,9 +13,14 @@ export default class eventsPost extends Component {
         <SEO
           title={data.title}
           keywords={[
-            `Rohit Gupta`,
-            `Frontend Developer`,
-            `Developer`,
+            `UofT`,
+            `Toronto`,
+            `Electrical`,
+            `Mechanical`,
+            `Computer Science`,
+            `UTM`,
+            `Robotics`,
+            `News`,
             `${data.title}`
           ]}
         />
@@ -40,7 +45,7 @@ export default class eventsPost extends Component {
               </span>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: data.description.childMarkdownRemark.html
+                  __html: data.description.childMarkdownRemark.html,
                 }}
               />
             </div>
