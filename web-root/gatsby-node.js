@@ -31,7 +31,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
         result.data.allContentfulNews.edges.forEach(edge => {
           createPage({
-            path: "news/" + edge.node.slug,
+            path: edge.node.slug,
             component: newsPostTemplate,
             context: {
               slug: edge.node.slug
@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         });
         result.data.allContentfulEvents.edges.forEach(edge => {
           createPage({
-            path: "events/" + edge.node.slug,
+            path: edge.node.slug,
             component: eventsPostTemplate,
             context: {
               slug: edge.node.slug
