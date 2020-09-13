@@ -6,31 +6,28 @@ name: deploy-live
 # events but only for the master branch
 on:
   push:
-    branches: [ gh-pages ]
+    branches: 
+      - master
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout gh-pages branch
         uses: actions/checkout@v2.3.2
-      - name: Push directory to another repository
-        # You may pin to the exact commit or the version.
-        # uses: cpina/github-action-push-to-another-repository@637125d2256c6612875516875c0e715afb799614
-        uses: cpina/github-action-push-to-another-repository@v1.1
+      - name: Gatsby Publish
+        uses: enriikke/gatsby-gh-pages-action@v2.1.1
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PROD_ACCESS_TOKEN }}
         with:
-          # Source directory from the origin directory
-          source-directory: ./
-          # Name of the destination username/organization
-          destination-github-username: UTM-Robotics
-          # Destination repository
-          destination-repository-name: UTM-Robotics-Deployment
-          # Email for the git commit
-          user-email: utmrobotics@utmsu.ca
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          # A personal access token needed to push your site after it has been built.
+          access-token: ${{ secrets.API_TOKEN_GITHUB }}
+          # The branch expected by GitHub to have the static files needed for your site.
+          deploy-branch: gh-pages
+          # Additional arguments that get passed to `gatsby build`.
+          gatsby-args: --prefix-paths
+
+
