@@ -37,14 +37,15 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter((item) => item === "News")
-      .map((t) => {
-        return <News data={data.allContentfulNews}></News>;
-      })}
-    {data.contentfulSiteInformation.menus
       .filter(item => item === "Events")
       .map(t => {
         return <Events data={data.allContentfulEvents}></Events>;
+      })}
+
+    {data.contentfulSiteInformation.menus
+      .filter((item) => item === "News")
+      .map((t) => {
+        return <News data={data.allContentfulNews}></News>;
       })}
 
     {data.contentfulSiteInformation.menus
