@@ -169,6 +169,7 @@ export const pageQuery = graphql`
             }
           }
           startTime
+          endTime
           slug
           isFeatured
           title

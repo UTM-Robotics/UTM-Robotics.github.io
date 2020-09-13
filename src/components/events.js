@@ -32,12 +32,16 @@ export default class Events extends Component {
                     )}
                     <div className="details">
                       {item.node.tags.forEach((element) => {
-                        return (<Tag tag={element}></Tag>);
+                        return <Tag tag={element}></Tag>;
                       })}
                       <h3 className="title">{item.node.title}</h3>
                       <span className="date">
                         <i className="fas fa-calendar-alt"></i>{" "}
-                        {moment(item.node.createdAt).format("LL")}
+                        {moment(item.node.startTime).format("LL")}
+                      </span>
+                      <span className="date">
+                        <i className="fas fa-calendar-alt"></i>{" "}
+                        {moment(item.node.endTime).format("LL")}
                       </span>
                     </div>
                   </div>
