@@ -21,17 +21,17 @@ export default class Banner extends Component{
                 loop={Infinity} 
                 wrapper= "span"
                 steps={[
-                  'a Community',
+                  'a community',
                   1000,
                   'a Team', 
                   1000,
-                  'Learning',
+                  'learning',
                   1000,
-                  'Designing',
+                  'designing',
                   1000,
-                  'Creating',
+                  'creating',
                   1000,
-                  'Innovating',
+                  'innovating',
                   1000
                 ]}
                 />
