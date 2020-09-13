@@ -40,9 +40,9 @@ export default class Events extends Component {
                   <li key={index} className="item">
                     <div className="inner">
                       <Link className="link" to={"/events/" + item.node.slug} />
-                      {item.node.featureImages ? (
+                      {item.node.featuredImages.length > 0 ? (
                         <Img
-                          fixed={item.node.featureImages[0].fluid}
+                          fixed={item.node.featuredImages[0].fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
                         />
