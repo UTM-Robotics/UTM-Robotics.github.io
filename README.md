@@ -1,11 +1,12 @@
 ## Description
 This is the Server-Side Rendered UTM Robotics website for 2020+. 
 The site is created using the following technologies:
-    1. React (Web Framework)
-    2. Gatsby (Server-Side Rendering)
-    3. Contentful (Content Management Service)
-    4. Github Pages (Hosting)
-    5. Github Actions (Deployment)
+
+1. React (Web Framework)
+2. Gatsby (Server-Side Rendering)
+3. Contentful (Content Management Service)
+4. Github Pages (Hosting)
+5. Github Actions (Deployment)
 
 ## Rules
 1. Working-only in master
