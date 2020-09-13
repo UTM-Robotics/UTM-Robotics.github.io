@@ -74,7 +74,7 @@ export default class Events extends Component {
 
 export const pageQuery = graphql`
   query allEventsQuery {
-    allContentfulEvents {
+    allContentfulEvents (sort: {fields: startTime, order: DESC}) {
       edges {
         node {
           id

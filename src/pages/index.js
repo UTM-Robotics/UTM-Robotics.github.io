@@ -37,12 +37,6 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter((item) => item === "Team")
-      .map((t) => {
-        return <Team data={data.allContentfulService}></Team>;
-      })}
-
-    {data.contentfulSiteInformation.menus
       .filter((item) => item === "News")
       .map((t) => {
         return <News data={data.allContentfulNews}></News>;
@@ -52,6 +46,13 @@ const IndexPage = ({ data }) => (
       .map(t => {
         return <Events data={data.allContentfulEvents}></Events>;
       })}
+
+    {data.contentfulSiteInformation.menus
+      .filter((item) => item === "Team")
+      .map((t) => {
+        return <Team data={data.allContentfulService}></Team>;
+      })}
+
     {data.contentfulSiteInformation.menus
       .filter((item) => item === "Contact")
       .map((t) => {
@@ -133,7 +134,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulNews(limit: 100) {
+    allContentfulNews(limit: 100, sort: {fields: date, order: DESC}) {
       edges {
         node {
           id
@@ -154,7 +155,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulEvents {
+    allContentfulEvents (sort: {fields: startTime, order: DESC}) {
       edges {
         node {
           id
