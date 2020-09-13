@@ -1,17 +1,17 @@
 const dotenv = require("dotenv");
-
+spaceId = None;
+accessToken = None;
 if (process.env.ENVIRONMENT !== "production") {
-  dotenv.config();
+  dotenv.config({ path: ".env.development" });
 }
+spaceId = process.env.CONTENTFUL_SPACE_ID;
+accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
 
-//const { spaceId, accessToken } = process.env;
-spaceId = "hyhmgfckc4j9";
-accessToken = "ojTuQGE-jHUaJqL19Dcv-t-YuLqVV7e0TMUPPSqagyw";
 module.exports = {
   siteMetadata: {
     title: `UTM Robotics`,
-    description: `Organizational site of the t`,
-    author: `@rohitguptab`
+    description: `Official website of the UTM Robotics Club`,
+    author: `UTM Robotics Club Executive Team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,8 +19,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: "gatsby-source-contentful",
@@ -28,7 +28,7 @@ module.exports = {
         spaceId,
         accessToken,
         downloadLocal: false,
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -40,11 +40,11 @@ module.exports = {
         short_name: `UTM Robotics Club`,
         start_url: `/`,
         background_color: `#663399`,
-        theme_color:'#FFFFFF',
+        theme_color: "#FFFFFF",
         display: `standalone`,
-        icon: `src/images/logo.png`
-      }
+        icon: `src/images/logo.png`,
+      },
     }, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
     `gatsby-plugin-offline`,
-  ]
+  ],
 };
