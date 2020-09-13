@@ -9,7 +9,7 @@ export default class eventsPost extends Component {
   render() {
     const data = this.props.data.contentfulEvents;
     return (
-      <Layout highlighted="events">
+      <Layout >
         <SEO
           title={data.title}
           keywords={[
@@ -26,10 +26,10 @@ export default class eventsPost extends Component {
         />
         <div className="site-container blog-post">
           <div className="container">
-            {data.featureImages ? (
+            {data.featuredImages.length > 0 ? (
               <Img
                 className="feature-img"
-                fixed={data.featureImages[0].fluid}
+                fixed={data.featuredImages[0].fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
               />

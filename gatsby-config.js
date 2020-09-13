@@ -1,6 +1,6 @@
 const dotenv = require("dotenv");
-spaceId = None;
-accessToken = None;
+spaceId = null;
+accessToken = null;
 if (process.env.ENVIRONMENT !== "production") {
   dotenv.config({ path: ".env.development" });
 }

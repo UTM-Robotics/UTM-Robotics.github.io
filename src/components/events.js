@@ -20,7 +20,7 @@ export default class Events extends Component {
               return (
                 <li key={index} className="item">
                   <div className="inner">
-                    <Link className="link" to={item.node.slug} />
+                    <Link className="link" to={"/events/" + item.node.slug} />
                     {item.node.featureImages ? (
                       <Img
                         fixed={item.node.featureImages[0].fluid}
@@ -46,7 +46,7 @@ export default class Events extends Component {
             })}
           </ul>
           <div className="see-more">
-            <Link to="/Events">
+            <Link to="/events">
               <span>More Events</span>
             </Link>
           </div>

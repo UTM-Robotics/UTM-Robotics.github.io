@@ -7,7 +7,7 @@ import moment from "moment";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default class News extends Component {
+export default class Events extends Component {
   render() {
     const { data } = this.props;
     return (
@@ -25,24 +25,24 @@ export default class News extends Component {
             `News`,
           ]}
         />
-        <div className="site-container news-page" id="News">
+        <div className="site-container blog-page" id="News">
           <div className="container">
             <div className="section-head">
               <h1 className="line-heading h2">News</h1>
             </div>
             <ul
               className={`blogs-list ${
-                data.allContentfulNews.edges.length < 5 ? "few-blogs" : ""
+                data.allContentfulEvents.edges.length < 5 ? "few-blogs" : ""
               }`}
             >
-              {data.allContentfulNews.edges.map((item, index) => {
+              {data.allContentfulEvents.edges.map((item, index) => {
                 return (
                   <li key={index} className="item">
                     <div className="inner">
-                      <Link className="link" to={+ item.node.slug} />
-                      {item.node.featureImage ? (
+                      <Link className="link" to={"/events/" + item.node.slug} />
+                      {item.node.featureImages ? (
                         <Img
-                          fixed={item.node.featureImage.fluid}
+                          fixed={item.node.featureImages[0].fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
                         />
@@ -53,7 +53,11 @@ export default class News extends Component {
                         <h3 className="title">{item.node.title}</h3>
                         <span className="date">
                           <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.date).format("LL")}
+                          {moment(item.node.startTime).format("LL")}
+                        </span>
+                        <span className="date">
+                          <i className="fas fa-calendar-alt"></i>{" "}
+                          {moment(item.node.endTime).format("LL")}
                         </span>
                       </div>
                     </div>
@@ -69,14 +73,13 @@ export default class News extends Component {
 }
 
 export const pageQuery = graphql`
-  query allNewsQuery {
-    allContentfulNews(sort: { fields: date, order: DESC }) {
+  query allEventsQuery {
+    allContentfulEvents {
       edges {
         node {
-          title
-          slug
-          featureImage {
-            fluid(maxWidth: 1500) {
+          id
+          featuredImages {
+            fluid {
               base64
               aspectRatio
               src
@@ -86,8 +89,12 @@ export const pageQuery = graphql`
               sizes
             }
           }
+          startTime
+          endTime
+          slug
+          isFeatured
+          title
           tags
-          date
         }
       }
     }
