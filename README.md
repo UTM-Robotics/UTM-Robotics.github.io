@@ -105,3 +105,6 @@ git push
 2. Check Github Action Status:
 https://github.com/UTM-Robotics/UTM-Robotics.github.io/actions
 Your site is now live! If the Action failed, your code is broken, please contact an executive if you cannot immediately fix this.
+## Deployment Versions
+V1 - Past events
+V1.0.3 - Q&A Event

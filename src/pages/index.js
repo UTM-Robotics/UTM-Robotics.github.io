@@ -68,20 +68,6 @@ export const pageQuery = graphql`
   query AboutQuery {
     contentfulAboutMe {
       name
-      photo {
-        file {
-          url
-        }
-        fluid {
-          base64
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          sizes
-        }
-      }
       designation
       #age
       facebook
