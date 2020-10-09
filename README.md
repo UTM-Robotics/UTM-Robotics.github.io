@@ -108,3 +108,4 @@ Your site is now live! If the Action failed, your code is broken, please contact
 ## Deployment Versions
 V1 - Past events
 V1.0.3 - Q&A Event
+V1.0.4 - Weekly #2
