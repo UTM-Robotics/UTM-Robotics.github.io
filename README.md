@@ -110,3 +110,4 @@ V1 - Past events
 V1.0.3 - Q&A Event
 V1.0.4 - Weekly #2
 V1.0.5 - Weekly #2 fixed
+V1.0.6 - Weekly Workshops Added
