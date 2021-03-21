@@ -107,7 +107,9 @@ https://github.com/UTM-Robotics/UTM-Robotics.github.io/actions
 Your site is now live! If the Action failed, your code is broken, please contact an executive if you cannot immediately fix this.
 ## Deployment Versions
 V1 - Past events
-V1.0.3 - Q&A Event
-V1.0.4 - Weekly #2
-V1.0.5 - Weekly #2 fixed
-V1.0.6 - Weekly Workshops Added
+
+- V1.0.3 - Q&A Event
+- V1.0.4 - Weekly #2
+- V1.0.5 - Weekly #2 fixed
+- V1.0.6 - Weekly Workshops Added
+- V1.0.7 - Elections Advertising period news Page!
