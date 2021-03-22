@@ -113,3 +113,4 @@ V1 - Past events
 - V1.0.5 - Weekly #2 fixed
 - V1.0.6 - Weekly Workshops Added
 - V1.0.7 - Elections Advertising period news Page!
+- V1.0.8 - Elections update!
