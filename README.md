@@ -114,4 +114,4 @@ V1 - Past events
 - V1.0.6 - Weekly Workshops Added
 - V1.0.7 - Elections Advertising period news Page!
 - V1.0.8 - Elections update!
-- V1.0.9 - Nothing.
+- V1.0.9 - Remove elections, create hiring for 2021-2022
